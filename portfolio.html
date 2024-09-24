@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="/cours/img/profil.png" type="image/png">
+
+
+    <style>
+    /* Global Styles */
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    
+    /* Header */
+    header {
+        text-align: center;
+        padding: 2rem;
+        background-color: #1e1e1e;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        color: #4caf50;
+        margin: 0;
+    }
+    
+    header h2 {
+        font-size: 1.5rem;
+        color: #81c784;
+    }
+    
+    /* Navigation */
+    nav {
+        background-color: #2c2c2c;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        margin: 0 1rem;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #81c784;
+        font-size: 1.1rem;
+    }
+    
+    nav ul li a:hover {
+        color: #4caf50;
+    }
+    
+    /* Main Content */
+    main {
+        padding: 2rem;
+    }
+    
+    /* Section Titles */
+    section h2 {
+        font-size: 2rem;
+        color: #4caf50;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* About Section */
+    #about p {
+        font-size: 1.1rem;
+    }
+    
+    #about img {
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Projects Section */
+    article {
+        background-color: #1e1e1e;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+    }
+    
+    article h3 {
+        color: #81c784;
+    }
+    
+    article p {
+        font-size: 1rem;
+    }
+    
+    article a {
+        color: #4caf50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    article a:hover {
+        text-decoration: underline;
+    }
+    
+    article img {
+        display: block;
+        margin-top: 1rem;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .zoom {
+        transform: scale(1.25);
+    }
+    
+    /* Contact Form */
+    form {
+        background-color: #1e1e1e;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    
+    form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #81c784;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+    }
+    
+    form input[type="submit"], form button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    form input[type="submit"]:hover, form button:hover {
+        background-color: #388e3c;
+    }
+    
+    /* Google Maps Section */
+    iframe {
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #1e1e1e;
+        color: #81c784;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+    
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+    
+        article img {
+            height: auto;
+        }
+    }
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll("article img");
+        
+        images.forEach(img => {
+            img.addEventListener("mouseover", function() {
+                img.classList.add("zoom");
+            });
+
+            img.addEventListener("mouseout", function() {
+                img.classList.remove("zoom");
+            });
+        });
+    });
+</script>
+
+</head>
+<body>
+    <!-- En-tête avec nom et métier -->
+    <header>
+        <h1>Derbecque Marlay</h1>
+        <h2>Developpeur Web</h2>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section principale structurée sémantiquement -->
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil">
+            <h2>Accueil</h2>
+            <p>Bienvenue sur mon portfolio.</p>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="about">
+            <h2>À propos</h2>
+            <img src="/cours/img/profil.png" alt="Photo de profil" style="width:150px;height:150px;">
+            <p>Je suis un développeur web passionné avec une formation en informatique. J'aime résoudre des problèmes complexes et concevoir des interfaces utilisateur intuitives.</p>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projets">
+            <h2>Projets</h2>
+            <!-- Projet 1 -->
+            <article>
+                <h3>Site de Portfolio</h3>
+                <p>Un site de portfolio personnel conçu pour présenter mes compétences.</p>
+            </article>
+            <!-- Projet 2 -->
+            <article>
+                <h3>Un mini jeux en java</h3>
+                <p>Un petit jeux ou le but et de faire le meilleur score, en esquivent des ennemi</p>
+                <a href="..\pokedex 1G\page pokedex\lokhlass.html" target="_blank">Voir plus</a>
+                <img src="/cours/img/Capture d'écran 2024-09-23 145450.png" alt="Capture d'écran du Projet 2" style="width:300px;height:500px;">
+            </article>
+            <!-- Projet 3 -->
+            <article>
+                <h3>Formation qualifiante</h3>
+                <p>j'ai commencé un formation qualifiante de developpeur web et web mobil a talis.</p>
+                <a href="https://www.intercariforef.org/formations/tp-developpeur-web-et-web-mobile/talis-competences-certifications-bergerac/formation-02_202407264776_00504249.html" target="_blank">Voir plus</a>
+                <img src="/cours/img/Capture d'écran150141.png" alt="Capture d'écran du Projet 3" style="width:300px;height:200px;">
+            </article>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <!-- Formulaire de contact -->
+            <form action="#" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <br><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <label for="sujet">Sujet :</label>
+                <input type="text" id="sujet" name="sujet" required>
+                <br><br>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <br><br>
+
+                <button type="submit">Envoyer</button>
+            </form>
+
+            <!-- Intégration d'une carte Google Maps -->
+            <h3>Localisation</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172989.19122141978!2d-1.587173478694084!3d47.35425478604792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805f02a6b8b6241%3A0x323342ec53ea4f3f!2sL&#39;%C3%89cole%20de%20design%20Nantes%20Atlantique!5e0!3m2!1sfr!2sfr!4v1727095804718!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Derbecque marlay</p>
+    </footer>
+</body>
+</html>
